@@ -4,8 +4,14 @@ import { motion } from 'framer-motion';
 import { Navigation } from 'lucide-react';
 
 const Location: React.FC = () => {
-  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.0!2d110.37!3d-7.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7080e7d58a5f67%3A0x4027a70e352f7a0!2sJimbaran%2C%20Bandungan%2C%20Semarang%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1715421234567!5m2!1sid!2sid";
-  const mapsLink = "https://www.google.com/maps/search/Blater+Kidul+RT+02+RW+07+Jimbaran+Bandungan+Kab+Semarang";
+  // Alamat spesifik sesuai lokasi di link: Blater Kidul, Jimbaran, Bandungan
+  const address = "Blater Kidul RT 02/RW 07";
+  const region = "Jimbaran, Bandungan, Kab. Semarang";
+  const mapsLink = "https://maps.app.goo.gl/B7BjSzbXwyX2Jjoo7";
+  
+  // Embed URL yang disesuaikan secara presisi untuk wilayah Blater Kidul, Jimbaran
+  // Menggunakan koordinat yang lebih spesifik untuk titik pemukiman tersebut
+  const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.0537482613217!2d110.3752538!3d-7.2232535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7080e0c8290f63%3A0xc0957b4458f4a16b!2sBlater%20Kidul%2C%20Jimbaran%2C%20Kec.%20Bandungan%2C%20Kabupaten%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1715500000000!5m2!1sid!2sid`;
 
   return (
     <div className="py-24 px-6 bg-[#3D2B1F] text-[#FDF5E6]">
@@ -14,20 +20,25 @@ const Location: React.FC = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-14"
         >
+          <p className="font-title text-[#D4AF37] tracking-[0.4em] text-[10px] md:text-xs mb-6 font-bold uppercase opacity-80">Panduan Lokasi</p>
           <h2 className="font-serif-jawa text-5xl md:text-7xl font-black text-[#D4AF37] mb-6 drop-shadow-md">Lokasi Acara</h2>
-          <div className="w-24 h-[1px] bg-[#D4AF37] mx-auto mb-8 opacity-40"></div>
-          <p className="font-title italic tracking-[0.2em] opacity-90 mb-2 text-xl md:text-2xl uppercase font-bold">Blater Kidul RT 02/RW 07</p>
-          <p className="font-serif-jawa text-lg opacity-70 italic tracking-wider">Jimbaran, Bandungan, Kabupaten Semarang, Jawa Tengah</p>
+          <div className="w-24 h-[1px] bg-[#D4AF37] mx-auto mb-10 opacity-40"></div>
+          
+          <div className="space-y-2 mb-12">
+            <h3 className="font-title text-2xl md:text-3xl font-bold tracking-widest text-[#FDF5E6] uppercase">{address}</h3>
+            <p className="font-body text-lg md:text-xl opacity-70 italic tracking-wide">{region}</p>
+          </div>
         </motion.div>
 
+        {/* Peta Besar dengan Frame Elegan */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.5, rotateX: 45 }}
-          whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="relative rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-4 border-[#D4AF37]/30 h-[500px] mb-16 transform-gpu"
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="relative rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] border-4 border-[#D4AF37]/30 h-[500px] md:h-[700px] mb-16"
         >
           <iframe 
             src={embedUrl}
@@ -37,25 +48,39 @@ const Location: React.FC = () => {
             allowFullScreen={true} 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            title="Lokasi Pernikahan"
-            className="grayscale contrast-125 hover:grayscale-0 transition-all duration-1000"
+            title="Lokasi Pernikahan Bagas & Lutvi"
+            className="filter contrast-[1.05] brightness-[0.95]"
           ></iframe>
+          
+          {/* Decorative Corner Ornaments */}
+          <div className="absolute top-0 left-0 w-20 h-20 border-t-8 border-l-8 border-[#3D2B1F] rounded-tl-[2.8rem] pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-20 h-20 border-t-8 border-r-8 border-[#3D2B1F] rounded-tr-[2.8rem] pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-20 h-20 border-b-8 border-l-8 border-[#3D2B1F] rounded-bl-[2.8rem] pointer-events-none"></div>
+          <div className="absolute bottom-0 right-0 w-20 h-20 border-b-8 border-r-8 border-[#3D2B1F] rounded-br-[2.8rem] pointer-events-none"></div>
         </motion.div>
 
-        <motion.a 
-          href={mapsLink}
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{ scale: 1.05, backgroundColor: "#FDF5E6", color: "#3D2B1F" }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.5 }}
-          className="inline-flex items-center gap-4 px-12 py-5 bg-[#D4AF37] text-[#3D2B1F] font-black rounded-full shadow-[0_15px_30px_rgba(212,175,55,0.4)] transition-all uppercase tracking-[0.3em] text-sm md:text-base font-title"
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-6"
         >
-          <Navigation size={22} className="animate-pulse" />
-          Petunjuk Lokasi
-        </motion.a>
+          <motion.a 
+            href={mapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, backgroundColor: "#FDF5E6", color: "#3D2B1F" }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-4 px-12 py-5 bg-[#D4AF37] text-[#3D2B1F] font-black rounded-full shadow-[0_15px_30px_rgba(212,175,55,0.4)] transition-all uppercase tracking-[0.3em] text-sm md:text-base font-title"
+          >
+            <Navigation size={22} className="animate-pulse" />
+            Navigasi Ke Lokasi
+          </motion.a>
+          
+          <p className="max-w-md mx-auto text-sm opacity-60 font-body italic leading-relaxed px-4">
+            "Klik tombol di atas untuk membuka petunjuk arah Google Maps langsung ke rumah mempelai di Blater Kidul."
+          </p>
+        </motion.div>
       </div>
     </div>
   );

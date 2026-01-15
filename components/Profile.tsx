@@ -10,63 +10,61 @@ const Profile: React.FC = () => {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
-        className="mb-20"
+        className="mb-24"
       >
-        <p className="font-title text-[#8B4513] tracking-[0.5em] text-sm md:text-base mb-6 font-bold uppercase">Assalamu'alaikum Wr. Wb.</p>
-        <h2 className="font-serif-jawa text-5xl md:text-6xl font-black mb-8 text-[#3D2B1F] leading-tight">Mempelai Mulia</h2>
-        <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-8"></div>
-        <p className="font-body text-xl md:text-2xl text-[#5C4033] italic leading-relaxed max-w-3xl mx-auto">
+        <p className="font-title text-[#8B4513] tracking-[0.4em] text-[10px] md:text-xs mb-8 font-bold uppercase opacity-80">Assalamu'alaikum Wr. Wb.</p>
+        <h2 className="font-serif-jawa text-4xl md:text-6xl font-black mb-8 text-[#3D2B1F] leading-tight">Mempelai Mulia</h2>
+        <div className="w-16 h-[1px] bg-[#D4AF37] mx-auto mb-8"></div>
+        <p className="font-body text-lg md:text-xl text-[#5C4033] italic leading-relaxed max-w-2xl mx-auto opacity-90">
           "Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang-Mu dalam ikatan pernikahan:"
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-20 md:gap-12 items-start overflow-hidden py-10">
+      <div className="grid md:grid-cols-2 gap-24 md:gap-16 items-start overflow-hidden">
         {/* Groom Profile */}
         <motion.div 
-          initial={{ opacity: 0, x: -100, rotate: -5 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.3 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className="relative mb-10 group">
-            <div className="absolute inset-0 border-[6px] border-[#D4AF37] rounded-full -m-4 opacity-30 group-hover:scale-110 transition-transform duration-700"></div>
-            <div className="absolute inset-0 border-2 border-[#D4AF37] rounded-full -m-2 opacity-60"></div>
-            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border-[8px] border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl overflow-hidden relative">
-               <span className="font-serif-jawa text-8xl md:text-[10rem] font-black text-[#D4AF37] drop-shadow-md">B</span>
-               <div className="absolute inset-0 opacity-10 pointer-events-none">
-                 <img src="https://www.transparenttextures.com/patterns/batik-fractal.png" alt="" className="w-full h-full object-cover" />
-               </div>
+          <div className="relative mb-12 group">
+            <div className="absolute inset-0 border border-[#D4AF37]/20 rounded-full -m-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-1000"></div>
+            <div className="w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl relative overflow-hidden">
+               <span className="font-serif-jawa text-7xl md:text-9xl font-black text-[#D4AF37] drop-shadow-md">B</span>
+               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/batik-fractal.png')]"></div>
             </div>
           </div>
-          <h3 className="font-serif-jawa text-4xl md:text-5xl font-black text-[#3D2B1F] mb-4">Bagas Dwi Septyan</h3>
-          <p className="text-[#8B4513] font-bold text-lg mb-2 uppercase tracking-widest">Putra Dari:</p>
-          <p className="text-xl text-[#5C4033] font-semibold">Bapak Pardiman</p>
-          <p className="text-xl text-[#5C4033] font-semibold">& Ibu Nur Santi</p>
+          <h3 className="font-serif-jawa text-3xl md:text-4xl font-black text-[#3D2B1F] mb-4">Bagas Dwi Septyan</h3>
+          <div className="space-y-1">
+            <p className="text-[#8B4513] font-title text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">Putra Dari:</p>
+            <p className="text-lg text-[#5C4033] font-semibold">Bapak Pardiman</p>
+            <p className="text-lg text-[#5C4033] font-semibold">& Ibu Nur Santi</p>
+          </div>
         </motion.div>
 
         {/* Bride Profile */}
         <motion.div 
-          initial={{ opacity: 0, x: 100, rotate: 5 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.4 }}
-          viewport={{ once: true, amount: 0.3 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className="relative mb-10 group">
-            <div className="absolute inset-0 border-[6px] border-[#D4AF37] rounded-full -m-4 opacity-30 group-hover:scale-110 transition-transform duration-700"></div>
-            <div className="absolute inset-0 border-2 border-[#D4AF37] rounded-full -m-2 opacity-60"></div>
-            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border-[8px] border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl overflow-hidden relative">
-               <span className="font-serif-jawa text-8xl md:text-[10rem] font-black text-[#D4AF37] drop-shadow-md">L</span>
-               <div className="absolute inset-0 opacity-10 pointer-events-none">
-                 <img src="https://www.transparenttextures.com/patterns/batik-fractal.png" alt="" className="w-full h-full object-cover" />
-               </div>
+          <div className="relative mb-12 group">
+            <div className="absolute inset-0 border border-[#D4AF37]/20 rounded-full -m-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-1000"></div>
+            <div className="w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl relative overflow-hidden">
+               <span className="font-serif-jawa text-7xl md:text-9xl font-black text-[#D4AF37] drop-shadow-md">L</span>
+               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/batik-fractal.png')]"></div>
             </div>
           </div>
-          <h3 className="font-serif-jawa text-4xl md:text-5xl font-black text-[#3D2B1F] mb-4">Lutvi Amalia</h3>
-          <p className="text-[#8B4513] font-bold text-lg mb-2 uppercase tracking-widest">Putri Dari:</p>
-          <p className="text-xl text-[#5C4033] font-semibold">Bapak H. Muhammad Jumeno</p>
-          <p className="text-xl text-[#5C4033] font-semibold">& Ibu Hj. Turiyah</p>
+          <h3 className="font-serif-jawa text-3xl md:text-4xl font-black text-[#3D2B1F] mb-4">Lutvi Amalia</h3>
+          <div className="space-y-1">
+            <p className="text-[#8B4513] font-title text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">Putri Dari:</p>
+            <p className="text-lg text-[#5C4033] font-semibold">Bapak H. Muhammad Jumeno</p>
+            <p className="text-lg text-[#5C4033] font-semibold">& Ibu Hj. Turiyah</p>
+          </div>
         </motion.div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+// Fix: Added Variants type import to provide explicit typing for animation config
+import { motion, Variants } from 'framer-motion';
 import { WEDDING_DATE } from '../constants';
 import { CountdownTime } from '../types';
 
@@ -34,7 +35,8 @@ const Countdown: React.FC = () => {
     { label: 'Detik', value: timeLeft.seconds },
   ];
 
-  const containerVariants = {
+  // Fix: Explicitly typed as Variants to ensure transition properties are correctly validated
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -44,7 +46,8 @@ const Countdown: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  // Fix: Explicitly typed as Variants to ensure 'type: "spring"' is treated as AnimationGeneratorType instead of string
+  const itemVariants: Variants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: { 
       opacity: 1, 

@@ -5,7 +5,6 @@ import Cover from './components/Cover';
 import Profile from './components/Profile';
 import EventDetails from './components/EventDetails';
 import Countdown from './components/Countdown';
-import Gallery from './components/Gallery';
 import Location from './components/Location';
 import Guestbook from './components/Guestbook';
 import Prayers from './components/Prayers';
@@ -49,10 +48,6 @@ const App: React.FC = () => {
 
             <section id="countdown" className="relative z-10">
               <Countdown />
-            </section>
-
-            <section id="gallery" className="relative z-10">
-              <Gallery />
             </section>
 
             <section id="location" className="relative z-10">

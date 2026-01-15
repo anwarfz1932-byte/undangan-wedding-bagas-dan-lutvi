@@ -8,7 +8,7 @@ interface CoverProps {
   onOpen: () => void;
 }
 
-const Cover: React.FC<CoverProps> = ({ onOpen }) => {
+const Cover: React.FC = ({ onOpen }) => {
   const [guestName, setGuestName] = useState<string>('');
 
   useEffect(() => {
@@ -59,17 +59,17 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="font-title text-[#D4AF37] tracking-[0.4em] text-[10px] md:text-xs mb-8 uppercase font-bold"
+          className="font-title text-[#D4AF37] tracking-[0.5em] text-xs md:text-sm mb-10 uppercase font-bold"
         >
           The Wedding of
         </motion.p>
         
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center mb-8">
           <motion.h1 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="font-serif-jawa text-5xl md:text-7xl font-black text-[#D4AF37] leading-tight drop-shadow-2xl"
+            className="font-serif-jawa text-6xl md:text-8xl font-black text-[#D4AF37] leading-tight drop-shadow-2xl"
           >
             Bagas
           </motion.h1>
@@ -77,7 +77,7 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, type: "spring" }}
-            className="font-script text-3xl md:text-5xl text-[#FDF5E6] my-2"
+            className="font-script text-4xl md:text-6xl text-[#FDF5E6] my-4"
           >
             &
           </motion.span>
@@ -85,7 +85,7 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="font-serif-jawa text-5xl md:text-7xl font-black text-[#D4AF37] leading-tight drop-shadow-2xl"
+            className="font-serif-jawa text-6xl md:text-8xl font-black text-[#D4AF37] leading-tight drop-shadow-2xl"
           >
             Lutvi
           </motion.h1>
@@ -93,7 +93,7 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
 
         <motion.div 
           initial={{ width: 0 }}
-          animate={{ width: "10rem" }}
+          animate={{ width: "12rem" }}
           transition={{ delay: 1.5, duration: 1 }}
           className="h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-12"
         ></motion.div>
@@ -104,15 +104,15 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
           transition={{ delay: 1.8, duration: 0.8 }}
           className="mb-14 w-full"
         >
-          <p className="font-title text-[#D4AF37] text-[9px] md:text-[10px] tracking-[0.3em] uppercase mb-4 opacity-70">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-          <div className="relative inline-block px-10 py-5 border border-[#D4AF37]/20 rounded-2xl bg-[#FDF5E6]/5 backdrop-blur-sm">
-            <div className="absolute -top-1 -left-1 w-3 h-3 border-t border-l border-[#D4AF37]"></div>
-            <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b border-r border-[#D4AF37]"></div>
-            <h2 className="font-serif-jawa text-xl md:text-3xl font-bold text-[#FDF5E6] tracking-wide">
+          <p className="font-title text-[#D4AF37] text-xs tracking-[0.3em] uppercase mb-5 opacity-80 font-bold">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+          <div className="relative inline-block px-12 py-6 border border-[#D4AF37]/30 rounded-2xl bg-[#FDF5E6]/5 backdrop-blur-sm">
+            <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]"></div>
+            <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]"></div>
+            <h2 className="font-serif-jawa text-2xl md:text-4xl font-bold text-[#FDF5E6] tracking-wide">
               {guestName}
             </h2>
           </div>
-          <p className="mt-4 text-[11px] italic opacity-50 font-body uppercase tracking-widest">Di Tempat</p>
+          <p className="mt-5 text-sm italic opacity-60 font-body uppercase tracking-[0.4em] font-medium">Di Tempat</p>
         </motion.div>
 
         <motion.button 
@@ -120,16 +120,16 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2 }}
           onClick={onOpen}
-          className="group relative flex items-center gap-3 px-12 py-4 bg-[#D4AF37] text-[#3D2B1F] font-black rounded-full transition-all hover:bg-[#FDF5E6] hover:scale-105 shadow-[0_10px_30px_rgba(212,175,55,0.3)] active:scale-95 overflow-hidden"
+          className="group relative flex items-center gap-4 px-14 py-5 bg-[#D4AF37] text-[#3D2B1F] font-black rounded-full transition-all hover:bg-[#FDF5E6] hover:scale-105 shadow-[0_15px_35px_rgba(212,175,55,0.4)] active:scale-95 overflow-hidden"
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           <MailOpen className="w-5 h-5 group-hover:rotate-6 transition-transform relative z-10" />
-          <span className="text-xs md:text-sm uppercase tracking-[0.2em] relative z-10 font-title font-bold">Buka Undangan</span>
+          <span className="text-sm md:text-base uppercase tracking-[0.3em] relative z-10 font-title font-black">Buka Undangan</span>
         </motion.button>
       </motion.div>
 
-      <div className="absolute top-6 left-6 w-16 h-16 border-t border-l border-[#D4AF37]/30 rounded-tl-3xl pointer-events-none"></div>
-      <div className="absolute bottom-6 right-6 w-16 h-16 border-b border-r border-[#D4AF37]/30 rounded-br-3xl pointer-events-none"></div>
+      <div className="absolute top-8 left-8 w-20 h-20 border-t border-l border-[#D4AF37]/40 rounded-tl-[2rem] pointer-events-none"></div>
+      <div className="absolute bottom-8 right-8 w-20 h-20 border-b border-r border-[#D4AF37]/40 rounded-br-[2rem] pointer-events-none"></div>
     </motion.div>
   );
 };

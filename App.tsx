@@ -8,6 +8,7 @@ import Countdown from './components/Countdown';
 import Location from './components/Location';
 import Guestbook from './components/Guestbook';
 import Prayers from './components/Prayers';
+import Gifts from './components/Gifts';
 import Footer from './components/Footer';
 import { PETAL_SVG } from './constants';
 
@@ -98,6 +99,11 @@ const App: React.FC = () => {
 
             <section id="prayers" className="relative z-10">
               <Prayers />
+            </section>
+
+            {/* Gifts dipindahkan ke sebelum Footer sesuai permintaan "pojok bawah sebelum bagikan undangan" */}
+            <section id="gifts" className="relative z-10">
+              <Gifts />
             </section>
 
             <Footer />

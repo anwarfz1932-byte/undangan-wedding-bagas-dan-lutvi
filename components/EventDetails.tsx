@@ -25,36 +25,36 @@ const EventDetails: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <p className="font-title text-[#D4AF37] tracking-[0.4em] text-[10px] md:text-xs mb-6 font-bold uppercase opacity-80">Save The Date</p>
-          <h2 className="font-serif-jawa text-4xl md:text-6xl font-black text-[#D4AF37] mb-6">Waktu & Tempat</h2>
-          <div className="w-16 h-[1px] bg-[#D4AF37] mx-auto opacity-50"></div>
+          <p className="font-title text-[#D4AF37] tracking-[0.5em] text-xs md:text-sm mb-8 font-black uppercase opacity-90">Save The Date</p>
+          <h2 className="font-serif-jawa text-5xl md:text-7xl font-black text-[#D4AF37] mb-8">Waktu & Tempat</h2>
+          <div className="w-20 h-[1px] bg-[#D4AF37] mx-auto opacity-60"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Akad Nikah */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#FDF5E6]/5 border border-[#D4AF37]/20 p-10 rounded-[2.5rem] text-center flex flex-col justify-center relative overflow-hidden"
+            className="bg-[#FDF5E6]/5 border border-[#D4AF37]/30 p-12 rounded-[3rem] text-center flex flex-col justify-center relative overflow-hidden shadow-xl"
           >
-            <h3 className="font-serif-jawa text-3xl md:text-4xl text-[#D4AF37] font-black mb-12 tracking-wide italic">Akad Nikah</h3>
-            <div className="space-y-10">
-              <div className="flex flex-col items-center gap-3">
-                <Calendar className="text-[#D4AF37] opacity-60" size={24} />
-                <p className="font-title text-xl md:text-2xl font-bold tracking-widest uppercase">31 Januari 2026</p>
-                <p className="font-body text-sm italic opacity-60">Sabtu Kliwon</p>
+            <h3 className="font-serif-jawa text-4xl md:text-5xl text-[#D4AF37] font-black mb-14 tracking-wide italic">Akad Nikah</h3>
+            <div className="space-y-12">
+              <div className="flex flex-col items-center gap-4">
+                <Calendar className="text-[#D4AF37] opacity-80" size={28} />
+                <p className="font-title text-2xl md:text-3xl font-black tracking-[0.1em] uppercase">31 Januari 2026</p>
+                <p className="font-body text-lg italic opacity-70 font-medium">Sabtu Kliwon</p>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <Clock className="text-[#D4AF37] opacity-60" size={24} />
-                <p className="font-title text-lg md:text-xl font-medium tracking-wider">08.00 WIB - Selesai</p>
+              <div className="flex flex-col items-center gap-4">
+                <Clock className="text-[#D4AF37] opacity-80" size={28} />
+                <p className="font-title text-xl md:text-2xl font-bold tracking-widest uppercase">08.00 WIB - Selesai</p>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <MapPin className="text-[#D4AF37] opacity-60" size={24} />
-                <div className="max-w-xs">
-                   <p className="font-title text-sm md:text-base font-bold mb-1 tracking-wider uppercase text-[#D4AF37]">Blater Kidul RT 02/RW 07</p>
-                   <p className="font-body text-base opacity-70 leading-relaxed italic">Jimbaran, Bandungan, Kab. Semarang</p>
+              <div className="flex flex-col items-center gap-4">
+                <MapPin className="text-[#D4AF37] opacity-80" size={28} />
+                <div className="max-w-sm">
+                   <p className="font-title text-lg md:text-xl font-black mb-3 tracking-[0.15em] uppercase text-[#D4AF37]">Blater Kidul RT 02/RW 07</p>
+                   <p className="font-body text-lg md:text-xl opacity-80 leading-relaxed italic font-medium">Jimbaran, Bandungan, Kab. Semarang</p>
                 </div>
               </div>
             </div>
@@ -66,24 +66,24 @@ const EventDetails: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#D4AF37] text-[#3D2B1F] p-10 rounded-[2.5rem] text-center shadow-2xl flex flex-col justify-center relative overflow-hidden"
+            className="bg-[#D4AF37] text-[#3D2B1F] p-12 rounded-[3rem] text-center shadow-2xl flex flex-col justify-center relative overflow-hidden border border-white/20"
           >
-            <h3 className="font-serif-jawa text-3xl md:text-4xl font-black mb-12 tracking-wide italic">Resepsi</h3>
-            <div className="space-y-10">
-              <div className="flex flex-col items-center gap-3">
-                <Calendar className="opacity-60" size={24} />
-                <p className="font-title text-xl md:text-2xl font-bold tracking-widest uppercase">31 Januari 2026</p>
-                <p className="font-body text-sm italic opacity-60">Sabtu Kliwon</p>
+            <h3 className="font-serif-jawa text-4xl md:text-5xl font-black mb-14 tracking-wide italic">Resepsi</h3>
+            <div className="space-y-12">
+              <div className="flex flex-col items-center gap-4">
+                <Calendar className="opacity-80" size={28} />
+                <p className="font-title text-2xl md:text-3xl font-black tracking-[0.1em] uppercase">31 Januari 2026</p>
+                <p className="font-body text-lg italic opacity-80 font-bold">Sabtu Kliwon</p>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <Clock className="opacity-60" size={24} />
-                <p className="font-title text-lg md:text-xl font-bold tracking-wider">13.00 WIB - Selesai</p>
+              <div className="flex flex-col items-center gap-4">
+                <Clock className="opacity-80" size={28} />
+                <p className="font-title text-xl md:text-2xl font-black tracking-widest uppercase">13.00 WIB - Selesai</p>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <MapPin className="opacity-60" size={24} />
-                <div className="max-w-xs">
-                   <p className="font-title text-sm md:text-base font-bold mb-1 tracking-wider uppercase">Blater Kidul RT 02/RW 07</p>
-                   <p className="font-body text-base font-medium leading-relaxed italic opacity-80">Jimbaran, Bandungan, Kab. Semarang</p>
+              <div className="flex flex-col items-center gap-4">
+                <MapPin className="opacity-80" size={28} />
+                <div className="max-w-sm">
+                   <p className="font-title text-lg md:text-xl font-black mb-3 tracking-[0.15em] uppercase">Blater Kidul RT 02/RW 07</p>
+                   <p className="font-body text-lg md:text-xl font-bold leading-relaxed italic opacity-90">Jimbaran, Bandungan, Kab. Semarang</p>
                 </div>
               </div>
             </div>

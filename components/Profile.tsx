@@ -21,24 +21,24 @@ const Profile: React.FC = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="mb-24"
       >
-        <p className="font-title text-[#8B4513] tracking-[0.4em] text-[10px] md:text-xs mb-8 font-bold uppercase opacity-80">Assalamu'alaikum Wr. Wb.</p>
-        <h2 className="font-serif-jawa text-4xl md:text-6xl font-black mb-8 text-[#3D2B1F] leading-tight">Mempelai Mulia</h2>
+        <p className="font-title text-[#8B4513] tracking-[0.5em] text-xs md:text-sm mb-10 font-bold uppercase opacity-80 italic">Assalamu'alaikum Wr. Wb.</p>
+        <h2 className="font-serif-jawa text-5xl md:text-7xl font-black mb-10 text-[#3D2B1F] leading-tight drop-shadow-sm">Mempelai Mulia</h2>
         
         {/* Floral Divider */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="w-12 h-[1px] bg-[#D4AF37] opacity-50"></div>
-          <div className="text-[#D4AF37] w-6 h-6 rotate-45">
+        <div className="flex items-center justify-center gap-6 mb-10">
+          <div className="w-16 h-[1px] bg-[#D4AF37] opacity-60"></div>
+          <div className="text-[#D4AF37] w-8 h-8 rotate-45">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
           </div>
-          <div className="w-12 h-[1px] bg-[#D4AF37] opacity-50"></div>
+          <div className="w-16 h-[1px] bg-[#D4AF37] opacity-60"></div>
         </div>
 
-        <p className="font-body text-lg md:text-xl text-[#5C4033] italic leading-relaxed max-w-2xl mx-auto opacity-90">
+        <p className="font-body text-xl md:text-2xl text-[#5C4033] italic leading-relaxed max-w-3xl mx-auto opacity-90 px-4">
           "Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkaikan kasih sayang-Mu dalam ikatan pernikahan:"
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-24 md:gap-16 items-start overflow-hidden relative z-10">
+      <div className="grid md:grid-cols-2 gap-24 md:gap-20 items-start overflow-hidden relative z-10">
         {/* Groom Profile */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -47,22 +47,22 @@ const Profile: React.FC = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className="relative mb-12 group">
-            <div className="absolute inset-0 border border-[#D4AF37]/20 rounded-full -m-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-1000"></div>
-            <div className="w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl relative overflow-hidden">
-               <span className="font-serif-jawa text-7xl md:text-9xl font-black text-[#D4AF37] drop-shadow-md">B</span>
+          <div className="relative mb-14 group">
+            <div className="absolute inset-0 border-2 border-[#D4AF37]/30 rounded-full -m-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-1000"></div>
+            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl relative overflow-hidden">
+               <span className="font-serif-jawa text-8xl md:text-[10rem] font-black text-[#D4AF37] drop-shadow-md">B</span>
                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/batik-fractal.png')]"></div>
             </div>
             {/* Flower on Frame */}
-            <div className="absolute -top-4 -right-4 text-[#D4AF37] w-12 h-12">
+            <div className="absolute -top-6 -right-6 text-[#D4AF37] w-14 h-14">
                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,22C12,22 17,18 17,13C17,8 12,2 12,2C12,2 7,8 7,13C7,18 12,22 12,22Z"/></svg>
             </div>
           </div>
-          <h3 className="font-serif-jawa text-3xl md:text-4xl font-black text-[#3D2B1F] mb-4">Bagas Dwi Septyan</h3>
-          <div className="space-y-1">
-            <p className="text-[#8B4513] font-title text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">Putra Dari:</p>
-            <p className="text-lg text-[#5C4033] font-semibold">Bapak Pardiman</p>
-            <p className="text-lg text-[#5C4033] font-semibold">& Ibu Nur Santi</p>
+          <h3 className="font-serif-jawa text-4xl md:text-5xl font-black text-[#3D2B1F] mb-6">Bagas Dwi Septyan</h3>
+          <div className="space-y-2">
+            <p className="text-[#8B4513] font-title text-xs uppercase tracking-[0.4em] font-black opacity-70">Putra Dari:</p>
+            <p className="text-xl md:text-2xl text-[#5C4033] font-bold font-body">Bapak Pardiman</p>
+            <p className="text-xl md:text-2xl text-[#5C4033] font-bold font-body">& Ibu Nur Santi</p>
           </div>
         </motion.div>
 
@@ -74,22 +74,22 @@ const Profile: React.FC = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className="relative mb-12 group">
-            <div className="absolute inset-0 border border-[#D4AF37]/20 rounded-full -m-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-1000"></div>
-            <div className="w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl relative overflow-hidden">
-               <span className="font-serif-jawa text-7xl md:text-9xl font-black text-[#D4AF37] drop-shadow-md">L</span>
+          <div className="relative mb-14 group">
+            <div className="absolute inset-0 border-2 border-[#D4AF37]/30 rounded-full -m-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-1000"></div>
+            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-[#FDF5E6] bg-[#3D2B1F] flex items-center justify-center shadow-2xl relative overflow-hidden">
+               <span className="font-serif-jawa text-8xl md:text-[10rem] font-black text-[#D4AF37] drop-shadow-md">L</span>
                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/batik-fractal.png')]"></div>
             </div>
             {/* Flower on Frame */}
-            <div className="absolute -top-4 -left-4 text-[#D4AF37] w-12 h-12 -scale-x-100">
+            <div className="absolute -top-6 -left-6 text-[#D4AF37] w-14 h-14 -scale-x-100">
                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12,22C12,22 17,18 17,13C17,8 12,2 12,2C12,2 7,8 7,13C7,18 12,22 12,22Z"/></svg>
             </div>
           </div>
-          <h3 className="font-serif-jawa text-3xl md:text-4xl font-black text-[#3D2B1F] mb-4">Lutvi Amalia</h3>
-          <div className="space-y-1">
-            <p className="text-[#8B4513] font-title text-[10px] uppercase tracking-[0.3em] font-bold opacity-60">Putri Dari:</p>
-            <p className="text-lg text-[#5C4033] font-semibold">Bapak H. Muhammad Jumeno</p>
-            <p className="text-lg text-[#5C4033] font-semibold">& Ibu Hj. Turiyah</p>
+          <h3 className="font-serif-jawa text-4xl md:text-5xl font-black text-[#3D2B1F] mb-6">Lutvi Amalia</h3>
+          <div className="space-y-2">
+            <p className="text-[#8B4513] font-title text-xs uppercase tracking-[0.4em] font-black opacity-70">Putri Dari:</p>
+            <p className="text-xl md:text-2xl text-[#5C4033] font-bold font-body">Bapak H. Muhammad Jumeno</p>
+            <p className="text-xl md:text-2xl text-[#5C4033] font-bold font-body">& Ibu Hj. Turiyah</p>
           </div>
         </motion.div>
       </div>

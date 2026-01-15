@@ -7,6 +7,12 @@ import { FLORAL_CORNER } from '../constants';
 const Gifts: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const accountNo = "089646703900";
+  
+  /**
+   * Menggunakan link redirect resmi DANA.
+   * Meskipun tidak ada URL publik universal untuk langsung ke input nominal tanpa hash QR,
+   * link ini adalah cara paling aman untuk membuka aplikasi DANA di perangkat mobile.
+   */
   const danaLink = `https://link.dana.id/qr/`;
 
   const handleCopy = () => {
@@ -59,6 +65,7 @@ const Gifts: React.FC = () => {
               
               <div className="space-y-2">
                 <p className="text-xs uppercase tracking-[0.4em] text-[#D4AF37] opacity-80 font-black">Nomor Rekening/HP:</p>
+                {/* Tampilan nomor dalam 1 baris tanpa spasi/strip sesuai permintaan */}
                 <h3 className="text-3xl md:text-4xl font-black text-[#FDF5E6] font-title tracking-[0.1em]">{accountNo}</h3>
               </div>
 
@@ -92,7 +99,7 @@ const Gifts: React.FC = () => {
           </div>
           
           <p className="mt-10 text-sm md:text-base opacity-60 font-body italic font-medium leading-relaxed">
-            *Silakan salin nomor HP di atas terlebih dahulu <br className="hidden md:block" /> sebelum membuka aplikasi DANA untuk kemudahan transfer.
+            *Silakan salin nomor HP di atas terlebih dahulu <br className="hidden md:block" /> sebelum membuka aplikasi DANA untuk memudahkan transfer ke nomor {accountNo}.
           </p>
         </motion.div>
       </div>

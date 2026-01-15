@@ -9,6 +9,42 @@ import Location from './components/Location';
 import Guestbook from './components/Guestbook';
 import Prayers from './components/Prayers';
 import Footer from './components/Footer';
+import { PETAL_SVG } from './constants';
+
+const FloatingPetals = () => {
+  const petals = Array.from({ length: 15 });
+  return (
+    <div className="fixed inset-0 pointer-events-none z-20 overflow-hidden">
+      {petals.map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ 
+            top: -20, 
+            left: `${Math.random() * 100}%`, 
+            opacity: 0,
+            rotate: 0,
+            scale: Math.random() * 0.5 + 0.5
+          }}
+          animate={{ 
+            top: '110%', 
+            left: `${Math.random() * 100}%`,
+            opacity: [0, 0.4, 0.4, 0],
+            rotate: 360,
+          }}
+          transition={{ 
+            duration: Math.random() * 10 + 10, 
+            repeat: Infinity, 
+            delay: Math.random() * 20,
+            ease: "linear"
+          }}
+          className="absolute text-[#D4AF37]/30 w-4 h-4"
+        >
+          {PETAL_SVG}
+        </motion.div>
+      ))}
+    </div>
+  );
+};
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +69,8 @@ const App: React.FC = () => {
             transition={{ duration: 1 }}
             className="bg-[#FDF5E6] text-[#5C4033]"
           >
+            <FloatingPetals />
+            
             {/* Background Texture */}
             <div className="fixed inset-0 pointer-events-none opacity-5 z-0">
                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/batik-fractal.png')]"></div>

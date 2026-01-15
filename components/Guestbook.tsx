@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, User, MessageCircle, CheckCircle2 } from 'lucide-react';
 import { GuestMessage } from '../types';
+import { FLORAL_CORNER } from '../constants';
 
 const Guestbook: React.FC = () => {
   const [messages, setMessages] = useState<GuestMessage[]>([
@@ -33,8 +34,16 @@ const Guestbook: React.FC = () => {
   };
 
   return (
-    <div className="py-24 px-6 bg-[#FDF5E6]">
-      <div className="max-w-4xl mx-auto">
+    <div className="py-24 px-6 bg-[#FDF5E6] relative overflow-hidden">
+      {/* Decorative Floral */}
+      <div className="absolute top-0 left-0 w-64 text-[#D4AF37]/20 pointer-events-none">
+        {FLORAL_CORNER}
+      </div>
+      <div className="absolute bottom-0 right-0 w-64 text-[#D4AF37]/20 rotate-180 pointer-events-none">
+        {FLORAL_CORNER}
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-serif-jawa text-4xl md:text-5xl font-black text-[#3D2B1F] mb-4">Buku Tamu</h2>
           <div className="w-12 h-[1px] bg-[#D4AF37] mx-auto mb-6"></div>

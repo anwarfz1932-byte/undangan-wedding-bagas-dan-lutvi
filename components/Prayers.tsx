@@ -1,10 +1,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FLORAL_CORNER } from '../constants';
 
 const Prayers: React.FC = () => {
   return (
     <div className="py-32 px-6 bg-[#FDF5E6] text-[#5C4033] relative overflow-hidden">
+      {/* Decorative Floral */}
+      <div className="absolute top-0 right-0 w-72 text-[#D4AF37]/15 -rotate-90 pointer-events-none">
+        {FLORAL_CORNER}
+      </div>
+      <div className="absolute bottom-0 left-0 w-72 text-[#D4AF37]/15 rotate-90 pointer-events-none">
+        {FLORAL_CORNER}
+      </div>
+
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0 }}

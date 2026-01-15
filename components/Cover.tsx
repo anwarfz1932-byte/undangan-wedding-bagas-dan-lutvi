@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { JAVANESE_MOTIF } from '../constants';
+import { JAVANESE_MOTIF, FLORAL_CORNER } from '../constants';
 import { MailOpen } from 'lucide-react';
 
 interface CoverProps {
@@ -30,6 +30,24 @@ const Cover: React.FC<CoverProps> = ({ onOpen }) => {
       <div className="absolute inset-0 opacity-10">
         {JAVANESE_MOTIF}
       </div>
+
+      {/* Floral Ornaments */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.4, scale: 1 }}
+        transition={{ duration: 2 }}
+        className="absolute top-0 left-0 w-48 md:w-80 text-[#D4AF37]"
+      >
+        {FLORAL_CORNER}
+      </motion.div>
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.4, scale: 1 }}
+        transition={{ duration: 2 }}
+        className="absolute bottom-0 right-0 w-48 md:w-80 text-[#D4AF37] rotate-180"
+      >
+        {FLORAL_CORNER}
+      </motion.div>
 
       <motion.div 
         initial={{ opacity: 0, y: 30 }}

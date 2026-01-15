@@ -22,8 +22,18 @@ export const JAVANESE_MOTIF = (
   </svg>
 );
 
-export const ORNAMENT_LEFT = (
-  <svg width="60" height="60" viewBox="0 0 100 100" className="fill-[#D4AF37]">
-    <path d="M100,0 C80,20 60,30 40,30 C20,30 0,20 0,0 L0,100 C20,80 40,70 60,70 C80,70 100,80 100,100 Z" />
+export const FLORAL_CORNER = (
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10,10 Q50,10 50,50 M10,10 Q10,50 50,50 M50,50 Q90,50 90,90 M50,50 Q50,90 90,90" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
+    <circle cx="50" cy="50" r="3" fill="currentColor" opacity="0.5"/>
+    <path d="M20,10 Q60,20 40,60" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
+    <path d="M10,20 Q20,60 60,40" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
+    <path d="M10,10 L190,190" stroke="currentColor" strokeWidth="0.2" opacity="0.1"/>
+  </svg>
+);
+
+export const PETAL_SVG = (
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12,2C12,2 4,10 4,16C4,20.42 7.58,24 12,24C16.42,24 20,20.42 20,16C20,10 12,2 12,2Z" />
   </svg>
 );

@@ -2,12 +2,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin } from 'lucide-react';
+import { FLORAL_CORNER } from '../constants';
 
 const EventDetails: React.FC = () => {
   return (
     <div className="bg-[#3D2B1F] text-[#FDF5E6] py-32 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
       
+      {/* Decorative Floral */}
+      <div className="absolute top-0 left-0 w-64 text-[#D4AF37]/20 pointer-events-none">
+        {FLORAL_CORNER}
+      </div>
+      <div className="absolute bottom-0 right-0 w-64 text-[#D4AF37]/20 rotate-180 pointer-events-none">
+        {FLORAL_CORNER}
+      </div>
+
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -28,7 +37,7 @@ const EventDetails: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#FDF5E6]/5 border border-[#D4AF37]/20 p-10 rounded-[2.5rem] text-center flex flex-col justify-center"
+            className="bg-[#FDF5E6]/5 border border-[#D4AF37]/20 p-10 rounded-[2.5rem] text-center flex flex-col justify-center relative overflow-hidden"
           >
             <h3 className="font-serif-jawa text-3xl md:text-4xl text-[#D4AF37] font-black mb-12 tracking-wide italic">Akad Nikah</h3>
             <div className="space-y-10">
@@ -57,7 +66,7 @@ const EventDetails: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#D4AF37] text-[#3D2B1F] p-10 rounded-[2.5rem] text-center shadow-2xl flex flex-col justify-center"
+            className="bg-[#D4AF37] text-[#3D2B1F] p-10 rounded-[2.5rem] text-center shadow-2xl flex flex-col justify-center relative overflow-hidden"
           >
             <h3 className="font-serif-jawa text-3xl md:text-4xl font-black mb-12 tracking-wide italic">Resepsi</h3>
             <div className="space-y-10">
